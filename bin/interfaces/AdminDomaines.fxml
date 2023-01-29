@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminDomaines">
+   <children>
+      <TableView fx:id="table" layoutX="134.0" layoutY="282.0" prefHeight="260.0" prefWidth="666.0" stylesheets="@../application/application.css">
+        <columns>
+            <TableColumn fx:id="tab_code" prefWidth="333.59996032714844" text="Code" />
+            <TableColumn fx:id="tab_lib" prefWidth="332.0" text="Libelle" />
+        </columns>
+      </TableView>
+      <Separator layoutX="133.0" layoutY="61.0" orientation="VERTICAL" prefHeight="339.0" prefWidth="6.0" />
+      <AnchorPane layoutY="-4.0" prefHeight="548.0" prefWidth="136.0" style="-fx-background-color: #373737;">
+         <children>
+            <Pane layoutX="-9.0" prefHeight="66.0" prefWidth="209.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="12.0" layoutY="25.0" prefHeight="17.0" prefWidth="113.0" text="Center Formations" textFill="WHITE" />
+                  <Separator layoutY="57.0" prefHeight="17.0" prefWidth="136.0" />
+                  <Separator layoutX="134.0" layoutY="5.0" orientation="VERTICAL" prefHeight="60.0" prefWidth="6.0" style="-fx-background-color: white;" />
+               </children>
+            </Pane>
+            <Button layoutY="90.0" mnemonicParsing="false" onMouseClicked="#adminFormations" prefHeight="38.0" prefWidth="136.0" style="-fx-background-color: #373737;" text="Formations" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0" />
+            <Button layoutX="-3.0" layoutY="248.0" mnemonicParsing="false" onMouseClicked="#adminFormateurs" prefHeight="38.0" prefWidth="136.0" style="-fx-background-color: #373737;" text="Formateurs" textFill="WHITE" AnchorPane.leftAnchor="-0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="180.0" />
+            <Button layoutX="-3.0" layoutY="328.0" mnemonicParsing="false" onMouseClicked="#adminParticipants" prefHeight="38.0" prefWidth="136.0" style="-fx-background-color: #373737;" text="Participants" textFill="WHITE" AnchorPane.leftAnchor="-0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="270.0" />
+            <Button layoutX="1.0" layoutY="425.0" mnemonicParsing="false" onMouseClicked="#adminDomaines" prefHeight="38.0" prefWidth="136.0" style="-fx-background-color: #53585c;" text="Domaines" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="360.0" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="151.0" layoutY="49.0" stylesheets="@../application/application.css" text="Libelle">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="lib_fld" layoutX="272.0" layoutY="48.0" styleClass="tf_box" stylesheets="@../application/application.css" />
+      <Button fx:id="add_btn" layoutX="466.0" layoutY="48.0" mnemonicParsing="false" onMouseClicked="#addDomaine" styleClass="pink-btn" stylesheets="@../application/application.css" text="Add" />
+      <Button fx:id="del_btn" layoutX="460.0" layoutY="246.0" mnemonicParsing="false" onMouseClicked="#deleteDomaine" styleClass="pink-btn" stylesheets="@../application/application.css" text="Delete" />
+      <Button fx:id="mod_btn" layoutX="458.0" layoutY="187.0" mnemonicParsing="false" onMouseClicked="#updateDomaine" styleClass="pink-btn" stylesheets="@../application/application.css" text="Update" />
+      <Label layoutX="141.0" layoutY="252.0" stylesheets="@../application/application.css" text="Code_formateur">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="code_del_fld" layoutX="272.0" layoutY="249.0" prefHeight="26.0" prefWidth="150.0" styleClass="tf_box" stylesheets="@../application/application.css" />
+      <Label layoutX="140.0" layoutY="145.0" stylesheets="@../application/application.css" text="Code_formateur">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="code_mod_fld" layoutX="272.0" layoutY="132.0" prefHeight="26.0" prefWidth="150.0" styleClass="tf_box" stylesheets="@../application/application.css" />
+      <Label layoutX="151.0" layoutY="178.0" stylesheets="@../application/application.css" text="Libelle">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="lib_mod_fld" layoutX="272.0" layoutY="175.0" styleClass="tf_box" stylesheets="@../application/application.css" />
+      <Label layoutX="143.0" layoutY="7.0" text="ADD SECTION">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="138.0" layoutY="90.0" text="MODIFY SECTION">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="143.0" layoutY="209.0" text="DELETE SECTION">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Separator layoutX="134.0" layoutY="280.0" prefHeight="3.0" prefWidth="666.0" />
+      <Button fx:id="search_btn" layoutX="460.0" layoutY="143.0" mnemonicParsing="false" onMouseClicked="#searchDomaine" styleClass="pink-btn" stylesheets="@../application/application.css" text="Search" />
+   </children>
+</AnchorPane>

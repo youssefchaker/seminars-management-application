@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="642.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminFormateurs">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="900.0">
+         <left>
+            <VBox minHeight="-Infinity" prefHeight="593.0" prefWidth="204.0" style="-fx-background-color: #8000ff;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button layoutX="10.0" layoutY="108.0" mnemonicParsing="false" onMouseClicked="#demandeFormateurs" prefHeight="39.0" prefWidth="207.0" style="-fx-background-color: #8000ff; -fx-font-weight: bold;" text="Demandes Fomateurs" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="80.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#demandeFormations" prefHeight="30.0" prefWidth="204.0" style="-fx-background-color: #8000ff; -fx-font-weight: bold;" text="Demandes Formations" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="248.0" mnemonicParsing="false" onMouseClicked="#adminFormations" prefHeight="43.0" prefWidth="214.0" style="-fx-background-color: #8000ff; -fx-font-weight: bold;" text="Formations" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="80.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="214.0" style="-fx-background-color: #7909e6; -fx-font-weight: bold;" text="Formateurs" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="171.0" mnemonicParsing="false" onMouseClicked="#adminParticipants" prefHeight="39.0" prefWidth="206.0" style="-fx-background-color: #8000ff; -fx-font-weight: bold;" text="Participants" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="221.0" mnemonicParsing="false" onMouseClicked="#adminDomaines" prefHeight="39.0" prefWidth="204.0" style="-fx-background-color: #8000ff; -fx-font-weight: bold;" text="Domaines" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </left>
+         <top>
+            <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="82.0" prefWidth="900.0" style="-fx-background-color: #680ac4;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="59.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Downloads/285237797_349474380448922_5035889581031037376_n.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="eepToo" textFill="#e3abfa">
+                     <font>
+                        <Font name="Harlow Solid Italic" size="36.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" onMouseClicked="#sign_out" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #680ac4;" text="Sign Out" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="780.0" top="25.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="878.0" BorderPane.alignment="CENTER">
+               <top>
+                  <HBox prefHeight="100.0" prefWidth="606.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="262.0" prefWidth="878.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="67.0" prefWidth="879.0" style="-fx-background-color: #8000ff;">
+                                 <children>
+                                    <Label text="Formateurs" textFill="WHITE">
+                                       <font>
+                                          <Font name="Harlow Solid Italic" size="30.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="20.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <TextField fx:id="mat_search" layoutX="346.0" layoutY="97.0" onMouseExited="#searchFormateur" prefHeight="26.0" prefWidth="188.0" promptText="Matricule" />
+                              <VBox layoutX="407.0" layoutY="146.0" style="-fx-background-color: #ffffff;" />
+                              <TextField fx:id="prenom_fld" layoutX="306.0" layoutY="150.0" prefHeight="26.0" prefWidth="114.0" promptText="Prénom" />
+                              <Button fx:id="del_btn" layoutX="239.0" layoutY="207.0" mnemonicParsing="false" onMouseClicked="#deleteFormateur" prefHeight="27.0" prefWidth="123.0" style="-fx-background-color: #680ac4; -fx-font-weight: bold;" styleClass="pink-btn" stylesheets="@../application/application.css" text="Supprimer">
+                                 <font>
+                                    <Font name="Calibri" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="mod_btn" layoutX="544.0" layoutY="207.0" mnemonicParsing="false" onMouseClicked="#updateFormateur" prefHeight="27.0" prefWidth="127.0" style="-fx-background-color: #680ac4; -fx-font-weight: bold;" styleClass="pink-btn" stylesheets="@../application/application.css" text="Mettre à jour">
+                                 <font>
+                                    <Font name="Calibri" size="14.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="nom_fld" layoutX="147.0" layoutY="150.0" prefHeight="26.0" prefWidth="113.0" promptText="Nom" />
+                              <TextField fx:id="tel_fld" layoutX="645.0" layoutY="150.0" prefHeight="26.0" prefWidth="123.0" promptText="+216" />
+                              <Button fx:id="add_btn" layoutX="749.0" layoutY="20.0" mnemonicParsing="false" onMouseClicked="#addFormateur" prefHeight="27.0" prefWidth="104.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-text-fill: #680ac4;" styleClass="pink-btn" stylesheets="@../application/application.css" text="Ajouter" textFill="#680ac4">
+                                 <font>
+                                    <Font name="Calibri" size="14.0" />
+                                 </font>
+                              </Button>
+                              <ComboBox fx:id="domaine_fld" layoutX="458.0" layoutY="151.0" prefWidth="150.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+               </top>
+               <center>
+                  <TableView fx:id="table" prefHeight="310.0" prefWidth="759.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+                     <columns>
+                        <TableColumn fx:id="tab_mat" prefWidth="122.40004575252533" text="Matricule" />
+                        <TableColumn fx:id="tab_nom" prefWidth="134.39997100830078" text="Nom" />
+                        <TableColumn fx:id="tab_prenom" prefWidth="139.20001220703125" text="Prenom" />
+                        <TableColumn fx:id="tab_email" prefWidth="173.59994506835938" text="Email" />
+                        <TableColumn fx:id="tab_domaine" minWidth="0.0" prefWidth="160.0" text="Domaine" />
+                        <TableColumn fx:id="tab_tel" prefWidth="146.4000244140625" text="Num Tel" />
+                     </columns>
+                  </TableView>
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

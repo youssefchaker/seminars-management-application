@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Formations">
+   <children>
+      <TableView fx:id="table" layoutX="137.0" layoutY="59.0" prefHeight="483.0" prefWidth="666.0" stylesheets="@../application/application.css">
+        <columns>
+            <TableColumn fx:id="tab_inti" prefWidth="119.19999694824219" text="Intitulé" />
+          <TableColumn fx:id="tab_domaine" prefWidth="108.800048828125" text="Domaine" />
+          <TableColumn fx:id="tab_duree" prefWidth="68.79998779296875" text="Duree(jrs)" />
+            <TableColumn fx:id="tab_annee" prefWidth="52.0" text="Annee" />
+            <TableColumn fx:id="tab_mois" minWidth="2.39996337890625" prefWidth="48.0" text="Mois" />
+            <TableColumn fx:id="tab_form" prefWidth="94.4000244140625" text="Formateur" />
+            <TableColumn fx:id="tab_nbpart" prefWidth="92.800048828125" text="Nb Participants" />
+            <TableColumn fx:id="tab_part" prefWidth="85.5999755859375" text="p" />
+        </columns>
+      </TableView>
+      <Separator layoutX="133.0" layoutY="61.0" orientation="VERTICAL" prefHeight="339.0" prefWidth="6.0" />
+      <AnchorPane layoutY="-4.0" prefHeight="548.0" prefWidth="136.0" style="-fx-background-color: #373737;">
+         <children>
+            <Pane layoutX="-9.0" prefHeight="66.0" prefWidth="209.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="12.0" layoutY="25.0" prefHeight="17.0" prefWidth="113.0" text="Center Formations " textFill="WHITE" />
+                  <Separator layoutY="57.0" prefHeight="17.0" prefWidth="136.0" />
+                  <Separator layoutX="134.0" layoutY="5.0" orientation="VERTICAL" prefHeight="60.0" prefWidth="6.0" style="-fx-background-color: white;" />
+               </children>
+            </Pane>
+            <Button layoutY="87.0" mnemonicParsing="false" onMouseClicked="#home" prefHeight="38.0" prefWidth="136.0" style="-fx-background-color: #373737;" stylesheets="@../application/application.css" text="Home" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0" />
+            <Button layoutX="-3.0" layoutY="165.0" mnemonicParsing="false" onMouseClicked="#formations" prefHeight="38.0" prefWidth="136.0" style="-fx-background-color: #53585c;" text="Formations" textFill="WHITE" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="170.0" />
+            <Button layoutX="-3.0" layoutY="248.0" mnemonicParsing="false" onMouseClicked="#instructors" prefHeight="38.0" prefWidth="136.0" style="-fx-background-color: #373737;" text="Formateurs" textFill="WHITE" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="255.0" />
+         </children>
+      </AnchorPane>
+      <HBox layoutX="135.0" layoutY="-1.0" prefHeight="60.0" prefWidth="668.0" style="-fx-background-color: #373737;">
+         <children>
+            <Label alignment="CENTER" prefHeight="58.0" prefWidth="99.0" text="Recherche" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="search_fld" alignment="CENTER" prefHeight="58.0" prefWidth="446.0" style="-fx-background-color: #434544; -fx-text-fill: white;" styleClass="tf" stylesheets="@../application/application.css" />
+            <Button mnemonicParsing="false" onMouseClicked="#resetTable" prefHeight="61.0" prefWidth="76.0" text="Reset" />
+            <Button alignment="CENTER" mnemonicParsing="false" onMouseClicked="#search" prefHeight="59.0" prefWidth="72.0" text="Search" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

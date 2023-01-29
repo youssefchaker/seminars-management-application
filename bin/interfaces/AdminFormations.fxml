@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminFormations">
+   <children>
+      <TableView fx:id="table" layoutX="134.0" layoutY="282.0" prefHeight="260.0" prefWidth="364.0" stylesheets="@../application/application.css">
+        <columns>
+            <TableColumn fx:id="tab_code" prefWidth="59.20001220703125" text="Code" />
+            <TableColumn fx:id="tab_inti" prefWidth="71.99998474121094" text="Intitulé" />
+            <TableColumn fx:id="tab_form" prefWidth="65.5999755859375" text="Formateur" />
+            <TableColumn fx:id="tab_nbpart" prefWidth="100.00006103515625" text="Nb Participants" />
+            <TableColumn fx:id="tab_duree" prefWidth="67.99993896484375" text="Nb Jours" />
+        </columns>
+      </TableView>
+      <Separator layoutX="133.0" layoutY="61.0" orientation="VERTICAL" prefHeight="339.0" prefWidth="6.0" />
+      <AnchorPane layoutY="-4.0" prefHeight="548.0" prefWidth="136.0" style="-fx-background-color: #373737;">
+         <children>
+            <Pane layoutX="-9.0" prefHeight="66.0" prefWidth="209.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="12.0" layoutY="25.0" prefHeight="17.0" prefWidth="113.0" text="Center Formation" textFill="WHITE" />
+                  <Separator layoutY="57.0" prefHeight="17.0" prefWidth="136.0" />
+                  <Separator layoutX="134.0" layoutY="5.0" orientation="VERTICAL" prefHeight="60.0" prefWidth="6.0" style="-fx-background-color: white;" />
+               </children>
+            </Pane>
+            <Button layoutY="90.0" mnemonicParsing="false" onMouseClicked="#adminFormations" prefHeight="38.0" prefWidth="136.0" style="-fx-background-color: #53585c;" text="Formations" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0" />
+            <Button layoutX="-3.0" layoutY="248.0" mnemonicParsing="false" onMouseClicked="#adminFormateurs" prefHeight="38.0" prefWidth="136.0" style="-fx-background-color: #373737;" text="Formateurs" textFill="WHITE" AnchorPane.leftAnchor="-0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="180.0" />
+            <Button layoutX="-3.0" layoutY="328.0" mnemonicParsing="false" onMouseClicked="#adminParticipants" prefHeight="38.0" prefWidth="136.0" style="-fx-background-color: #373737;" text="Participants" textFill="WHITE" AnchorPane.leftAnchor="-0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="270.0" />
+            <Button layoutX="1.0" layoutY="425.0" mnemonicParsing="false" onMouseClicked="#adminDomaines" prefHeight="38.0" prefWidth="136.0" style="-fx-background-color: #373737;" text="Domaines" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="360.0" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="151.0" layoutY="63.0" stylesheets="@../application/application.css" text="Intitulé">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="inti_fld" layoutX="239.0" layoutY="60.0" styleClass="tf_box" stylesheets="@../application/application.css" />
+      <ComboBox fx:id="dom_fld" layoutX="583.0" layoutY="60.0" prefWidth="150.0" styleClass="tf_box" stylesheets="@../application/application.css" />
+      <Label layoutX="471.0" layoutY="63.0" stylesheets="@../application/application.css" text="Domaine">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="form_fld" layoutX="238.0" layoutY="171.0" prefWidth="150.0" styleClass="tf_box" stylesheets="@../application/application.css" />
+      <Label layoutX="145.0" layoutY="174.0" stylesheets="@../application/application.css" text="Formateur">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="144.0" layoutY="100.0" stylesheets="@../application/application.css" text="Nb_Jours">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="153.0" layoutY="140.0" stylesheets="@../application/application.css" text="Annee">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="483.0" layoutY="100.0" stylesheets="@../application/application.css" text="Mois">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="467.0" layoutY="140.0" stylesheets="@../application/application.css" text="Nb_Participants">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="add_btn" layoutX="612.0" layoutY="171.0" mnemonicParsing="false" onMouseClicked="#addFormation" styleClass="pink-btn" stylesheets="@../application/application.css" text="Add" />
+      <Button fx:id="del_btn" layoutX="386.0" layoutY="246.0" mnemonicParsing="false" onMouseClicked="#deleteFormation" styleClass="pink-btn" stylesheets="@../application/application.css" text="Delete" />
+      <Button fx:id="mod_btn" layoutX="743.0" layoutY="250.0" mnemonicParsing="false" onMouseClicked="#updateFormation" styleClass="pink-btn" stylesheets="@../application/application.css" text="Update" />
+      <Separator layoutX="137.0" layoutY="207.0" prefHeight="0.0" prefWidth="660.0" />
+      <Label layoutX="141.0" layoutY="252.0" stylesheets="@../application/application.css" text="Code_formation">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="code_del_fld" layoutX="256.0" layoutY="246.0" prefHeight="26.0" prefWidth="120.0" styleClass="tf_box" stylesheets="@../application/application.css" />
+      <Separator layoutX="435.0" layoutY="206.0" orientation="VERTICAL" prefHeight="76.0" prefWidth="18.0" />
+      <Label layoutX="454.0" layoutY="249.0" stylesheets="@../application/application.css" text="Code_formation">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="code_mod_fld" layoutX="569.0" layoutY="243.0" prefHeight="26.0" prefWidth="103.0" styleClass="tf_box" stylesheets="@../application/application.css" />
+      <Label layoutX="512.0" layoutY="291.0" stylesheets="@../application/application.css" text="Intitulé">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="inti_mod_fld" layoutX="626.0" layoutY="288.0" styleClass="tf_box" stylesheets="@../application/application.css" />
+      <ComboBox fx:id="dom_mod_fld" layoutX="627.0" layoutY="328.0" prefWidth="150.0" styleClass="tf_box" stylesheets="@../application/application.css" />
+      <Label layoutX="511.0" layoutY="328.0" stylesheets="@../application/application.css" text="Domaine">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="511.0" layoutY="406.0" stylesheets="@../application/application.css" text="Nb_Jours">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="510.0" layoutY="445.0" stylesheets="@../application/application.css" text="Mois">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="509.0" layoutY="478.0" stylesheets="@../application/application.css" text="Annee">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="form_mod_fld" layoutX="628.0" layoutY="363.0" prefWidth="150.0" styleClass="tf_box" stylesheets="@../application/application.css" />
+      <Label layoutX="512.0" layoutY="366.0" stylesheets="@../application/application.css" text="Formateur">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="508.0" layoutY="511.0" stylesheets="@../application/application.css" text="Nb_Participants">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="145.0" layoutY="14.0" text="ADD SECTION">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="452.0" layoutY="209.0" text="MODIFY SECTION">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="143.0" layoutY="209.0" text="DELETE SECTION">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Separator layoutX="134.0" layoutY="280.0" prefHeight="3.0" prefWidth="666.0" />
+      <Separator layoutX="492.0" layoutY="276.0" orientation="VERTICAL" prefHeight="268.0" prefWidth="18.0" />
+      <TextField fx:id="mois_fld" layoutX="583.0" layoutY="97.0" styleClass="tf_box" stylesheets="@../application/application.css" />
+      <TextField fx:id="nbj_fld" layoutX="238.0" layoutY="97.0" styleClass="tf_box" stylesheets="@../application/application.css" />
+      <TextField fx:id="annee_fld" layoutX="238.0" layoutY="137.0" styleClass="tf_box" stylesheets="@../application/application.css" />
+      <TextField fx:id="nbpart_fld" layoutX="583.0" layoutY="137.0" styleClass="tf_box" stylesheets="@../application/application.css" />
+      <TextField fx:id="nbj_mod_fld" layoutX="626.0" layoutY="403.0" styleClass="tf_box" stylesheets="@../application/application.css" />
+      <TextField fx:id="mois_mod_fld" layoutX="629.0" layoutY="442.0" styleClass="tf_box" stylesheets="@../application/application.css" />
+      <TextField fx:id="annee_mod_fld" layoutX="627.0" layoutY="475.0" styleClass="tf_box" stylesheets="@../application/application.css" />
+      <TextField fx:id="nbpart_mod_fld" layoutX="629.0" layoutY="508.0" styleClass="tf_box" stylesheets="@../application/application.css" />
+      <Button fx:id="search_btn" layoutX="681.0" layoutY="250.0" mnemonicParsing="false" onMouseClicked="#searchFormation" styleClass="pink-btn" stylesheets="@../application/application.css" text="Search" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="384.0" prefWidth="549.0" styleClass="parent" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Main">
+   <children>
+      <Pane fx:id="pane" layoutX="-7.0" layoutY="-1.0" prefHeight="386.0" prefWidth="556.0" styleClass="pane" stylesheets="@../application/application.css">
+         <children>
+            <Label layoutX="338.0" layoutY="72.0" prefHeight="21.0" prefWidth="172.0" text="Already have an account?" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn_in" layoutX="399.0" layoutY="306.0" mnemonicParsing="false" onAction="#openSignIn" styleClass="trans-btn-white-border" stylesheets="@../application/application.css" text="SignIn" />
+            <Label layoutX="82.0" layoutY="72.0" text="No account?" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn_up" layoutX="95.0" layoutY="306.0" mnemonicParsing="false" onAction="#openSignUp" styleClass="trans-btn-white-border" stylesheets="@../application/application.css" text="SignUp" />
+            <VBox fx:id="Vbox" layoutX="8.0" layoutY="1.0" prefHeight="401.0" prefWidth="297.0" styleClass="white-pane" stylesheets="@../application/application.css" visible="false" />
+            <Separator layoutX="281.0" orientation="VERTICAL" prefHeight="386.0" prefWidth="0.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

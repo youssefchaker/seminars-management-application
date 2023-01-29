@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="642.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminAjouterFormateur">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="900.0">
+         <left>
+            <VBox minHeight="-Infinity" prefHeight="574.0" prefWidth="196.0" style="-fx-background-color: #8000ff;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button layoutX="10.0" layoutY="108.0" mnemonicParsing="false" onMouseClicked="#demandeFormateur" prefHeight="30.0" prefWidth="196.0" style="-fx-background-color: #8000ff; -fx-font-weight: bold;" text="Demades Formateurs" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="70.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="80.0" mnemonicParsing="false" onMouseClicked="#demandeFormations" prefHeight="30.0" prefWidth="196.0" style="-fx-background-color: #8000ff; -fx-font-weight: bold;" text="Demandes Formations" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#adminFormations" prefHeight="39.0" prefWidth="190.0" style="-fx-background-color: #8000ff; -fx-font-weight: bold;" text="Formations" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="80.0" mnemonicParsing="false" onMouseClicked="#adminFormateurs" prefHeight="43.0" prefWidth="214.0" style="-fx-background-color: #8000ff; -fx-font-weight: bold;" text="Formateurs" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="332.0" mnemonicParsing="false" onMouseClicked="#addFormateur" prefHeight="30.0" prefWidth="196.0" style="-fx-background-color: #7909e6; -fx-font-weight: bold;" text="Ajouter Formateurs" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="171.0" mnemonicParsing="false" onMouseClicked="#adminParticipants" prefHeight="30.0" prefWidth="196.0" style="-fx-background-color: #8000ff; -fx-font-weight: bold;" text="Participants" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="221.0" mnemonicParsing="false" onMouseClicked="#adminDomaines" prefHeight="30.0" prefWidth="196.0" style="-fx-background-color: #8000ff; -fx-font-weight: bold;" text="Domaines" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </left>
+         <top>
+            <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="82.0" prefWidth="932.0" style="-fx-background-color: #680ac4;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="59.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Downloads/285237797_349474380448922_5035889581031037376_n.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="eepToo" textFill="#e3abfa">
+                     <font>
+                        <Font name="Harlow Solid Italic" size="36.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" onMouseClicked="#sign_out" prefHeight="26.0" prefWidth="99.0" style="-fx-background-color: #680ac4;" text="Sign Out" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="650.0" top="30.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <top>
+                  <HBox maxHeight="-Infinity" prefHeight="72.0" prefWidth="756.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="754.0">
+                           <children>
+                              <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="756.0" style="-fx-background-color: #8000ff;">
+                                 <children>
+                                    <Label text="Formateurs" textFill="WHITE">
+                                       <font>
+                                          <Font name="Harlow Solid Italic" size="30.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="20.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+               </top>
+               <center>
+                  <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="632.0" prefWidth="756.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <TextField fx:id="email_fld" layoutX="171.0" layoutY="169.0" prefHeight="26.0" prefWidth="415.0" promptText="Email Formateur" />
+                        <TextField fx:id="nom_fld" layoutX="171.0" layoutY="35.0" prefHeight="26.0" prefWidth="203.0" promptText="Nom" />
+                        <TextField fx:id="prenom_fld" layoutX="386.0" layoutY="35.0" prefHeight="26.0" prefWidth="200.0" promptText="Prénom" />
+                        <TextField fx:id="tel_fld" layoutX="171.0" layoutY="258.0" prefHeight="26.0" prefWidth="415.0" promptText="+216" />
+                        <ComboBox fx:id="profil_fld" layoutX="172.0" layoutY="352.0" opacity="0.38" prefHeight="28.0" prefWidth="413.0" promptText="Profil" />
+                        <TextField fx:id="mat_fld" layoutX="171.0" layoutY="78.0" prefHeight="26.0" prefWidth="415.0" promptText="CIN" />
+                        <DatePicker fx:id="dat_fld" layoutX="171.0" layoutY="214.0" prefHeight="25.0" prefWidth="415.0" promptText="Date de Naissance" />
+                        <Button fx:id="add_btn" layoutX="171.0" layoutY="444.0" mnemonicParsing="false" onMouseClicked="#insertFormateur" prefHeight="27.0" prefWidth="415.0" style="-fx-background-color: #680ac4; -fx-font-weight: bold; -fx-border-color: #680ac4;" styleClass="pink-btn" stylesheets="@../application/application.css" text="Ajouter Formateur">
+                           <font>
+                              <Font name="Calibri" size="14.0" />
+                           </font>
+                        </Button>
+                        <ComboBox fx:id="domaine_fld" layoutX="172.0" layoutY="397.0" opacity="0.38" prefHeight="28.0" prefWidth="413.0" promptText="Domaine" />
+                        <PasswordField fx:id="pass_fld" layoutX="171.0" layoutY="123.0" prefHeight="25.0" prefWidth="415.0" promptText="mot de passe" />
+                        <TextField fx:id="org_fld" layoutX="171.0" layoutY="304.0" prefHeight="26.0" prefWidth="415.0" promptText="Organisation" />
+                     </children>
+                  </Pane>
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
